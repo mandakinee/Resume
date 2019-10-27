@@ -1,0 +1,224 @@
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{0.0in}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeSubheadingSubPart}[2]{
+  \vspace{2pt}%\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      %\textbf{#1} & #2 \\
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{2pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{2pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{5pt}}
+\newcommand{\resumeItemListEndIntern}{\end{itemize}\vspace{65pt}}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{www.linkedin.com/in/mandakinee-singh-patel}{\Large Mandakinee Singh Patel}} & Email : \href{mailto:mandakineeiitkgp@gmail.com}{mandakineeiitkgp@gmail.com}\\
+  \href{www.linkedin.com/in/mandakinee-singh-patel/}{www.linkedin.com/in/mandakinee-singh-patel} & Mobile : +1-6124756553 \\
+\end{tabular*}
+
+
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+\resumeSubheading
+      {University of Minnesota}{Twin Cities, Minnesota}
+      {Master's of Science in Computer Science}{Sep. 2019 -- May 2021}
+    \resumeSubheading
+      {Indian Institute of Technology, Kharagpur}{Kharagpur, West Bengal}
+      {Bachelor of Technology in Computer Science;  GPA: 7.95/10}{Jul. 2011 -- May. 2015}
+    \resumeSubheading
+      {Adarsh Bhartiya Girls Inter College}{Mirzapur, Uttar Pradesh}
+      {Intermediate (UP Board);  Percentage:85\%}{2010}
+     \resumeSubheadingSubPart
+    {SSC (UP Board);  Percentage:76\%}{2008}
+  \resumeSubHeadingListEnd
+
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Samsung R\&D Institute, Bangalore(SRIB)}{Bangalore, Karnataka}
+      {Lead Engineer}{April 2019 - Aug 2019}
+      \resumeItemListStart
+\resumeItem{Video Stablization}
+{Documented and presented the first part of code, motion estimation, of video Stabalization. The project was to stabalize the video taken while walking, running and panning. The algorithm is divided into three major parts  Motion Estimation between two frames,  path planning of the camera movement and motion compensation for each frame.}
+\resumeItem{Multi-Exposure HDR using Deep Multi-Stage Neural Networks}
+          {Designed two networks first, AlignNet, Conditional GAN based network to align the exposure of the frames and the second, MergeNet, to merge these exposures in three steps encoding, blending and decoding. These two networks were then used to develope three different end to end architectures. }
+  \resumeItemListEnd
+
+    \resumeSubheadingSubPart
+      {Senior Software Engineer}{April 2017 - March 2019}
+      \resumeItemListStart
+
+ \resumeItem{Low-Light HDR}
+          {Designed and developed a multi-frame algorithm to handle the blur, noise, light effulgence and the local motion occurred during the frame capture. It takes multiple images with different exposures as input. The same exposure inputs are blended together to generate a less noisy image. The resulting images with different exposures are blended together while handling the local motion of the scene. }
+        \resumeItem{Multi stage Motion Compensated High Dynamic Range Imaging}
+          {Designed a new algorithm which processes on N images of different exposures, provided in increasing order of exposure values, in N-1 stages by combining two images recursively while propagating the motion data till a single image is formed.}
+        \resumeItem{Ghosting in High Dynamic Range Imaging}
+          {Developed a solution to detect ghosting between the successive images. Histogram and cumulative distribution based photometric alignment along with the output from the reference frame selection block is used to generate the pseudo image. A motion map is to be generated using pseudo image and which is then used later in blending stage to avoid ghost in the final output.
+}
+      \resumeItemListEnd
+ \resumeSubheadingSubPart
+      {Software Engineer}{July 2015 - March 2017}
+      \resumeItemListStart
+        \resumeItem{Glare Detection and Removal in Night Photography}
+          {Detecting the glare affected area using connected components and object/region segmentation. The two images were taken at angle difference which was then registered and the glare affected region of one image was replaced by the same of the second image.}
+          \resumeItem{Removal of Ghost Glare Caused by Light Sources}
+          {Ghost glares are tiny shaped artifacts which occurs because of the light sources. The algorithm takes two images captured one after another and uses an approach similar to glare detection with some further modification in the algorithm. This new algorithm gave an accuracy of 91\% when tested on videos.}
+        \resumeItem{Digitally Transparent Interface using Eye Tracking}
+          {A solution was designed to convert any device into transparent display using depth information collected using Microsoft Kinect, eye tracking algorithm and pinhole camera model.}
+      \resumeItemListEndIntern
+      
+       \resumeSubheadingSubPart
+      {Intern}{May 2014 - June 2014}
+      \resumeItemListStart
+        \resumeItem{Void Pantograph}
+          {Developed a novel approach for achieving a copy evident document. Used various filters to find tamper-resistant patterns in the background of a document.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Zone Startups}{Mumbai, Maharastra}
+      {Intern}{June,2015}
+      \resumeItemListStart
+        \resumeItem{Binary Classification of Scanned Document into Original and Photocopy }
+          {Binary classification of scanned pdf documents to identify if the given scanned documents are original(color). The solution designed was able to give an accuracy of 96\% when tested on over 400 documents}
+        
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Indian Institute of Technology}{Kharagpur, West Bengal}
+      {Student}{}
+      \resumeItemListStart
+        \resumeItem{B.Tech. Project - Study on Phylogenetic Tree Construction Using a Combination of Least Square and Supertree Approach}
+          {Study on the construction of phylogenetic tree using Neighbour-Joining algorithm to minimize the error for a given distance matrix}
+        \resumeItem{Speech and Natural Language Processing Term Project Correcting OCR Errors in Scientific Documents}
+          {Developed a Dictionary-Based Approach(using bi-gram frequency). Viterbi Algorithm was used in order to get the best sentence.}
+           \resumeItem{Inter–Hall Open Soft: Automated Mosaicing Of Torn Paper Documents}
+          {Designed an algorithm to mosaic the torn pieces based on the angle and the pixel values.}
+          
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Publication/ Achievement}
+  \resumeSubHeadingListStart
+ \resumeSubItem{Patent}
+      {Method for Multi-Stage Ghost Modelling in Motion Compensated High Dynamic Range Imaging}
+    \resumeSubItem{Patent}
+      {Method and Imaging Device for Managing Glare in an Image Frame}
+
+ \resumeSubItem{International Conference on Image Processing (ICIP), 2019}
+{Deep Multistage Learning for HDR with Large Object Motions}
+    \resumeSubItem{Paper in International Conference on Pattern Recognition (ICPR), 2016}
+      {Detection of Glare in Night Photography}
+\resumeSubItem{Paper in International Conference on Intelligent Human Computer Interaction (IHCI), 2015}
+      {Digitally Transparent Interface using Eye Tracking}
+\resumeSubItem{Samsung Best Paper Award(SBPA), 2018}
+      {A paper on "Multi Stage Motion Compensated HDR" was submitted in SBPA. In SBPA,  papers are submitted by global multimedia R\&D center and it has an acceptance rate of  6 \%. The paper went to final round and was presented in Samsung HQ, South Korea.}
+\resumeSubItem{Samsung Best Paper Award(SBPA), 2019}
+      {Paper submitted in SBPA, 2019 with topic "Deep Multistage Learning for HDR with Large Object Motions" and recieved a "Merit" award.}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}{ C, C++,  Python, MATLAB, Java(Basic), NEON(Basic)}
+     
+      \resumeSubItem{Technologies}{ OpenCV, Git, LaTex}
+    
+      \resumeSubItem{Operating Systems}{ Windows, Linux}
+    
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+
+\section{Extra Curricular Activities}
+ \resumeSubHeadingListStart
+\resumeSubItem{Music Group, IIT Khragapur}
+      {I was part of a music group where I used to play tabla and drums in events held in IIT Kharagpur}
+ \resumeSubItem{Photography Club, SRIB}
+      {I was a part of photography club in Samsung Research \& Development Institutre, Bangalore}
+    \resumeSubItem{Dance}
+      {I have been part of the Dreamz group, Samsung's internal dance group. I have performed in almost all the events held in Samsung}
+    \resumeSubItem{Seva Group, SRIB}
+     {I was an active member of Seva group which plants saplings}
+    
+  \resumeSubHeadingListEnd
+\end{document}
